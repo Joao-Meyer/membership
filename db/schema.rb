@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_18_192944) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_18_195126) do
   create_table "active_sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_agent"
+    t.string "ip_address"
     t.index ["user_id"], name: "index_active_sessions_on_user_id"
   end
 
