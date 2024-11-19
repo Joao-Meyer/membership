@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_19_000100) do
     t.datetime "confirmed_at"
     t.string "password_digest", null: false
     t.string "unconfirmed_email"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "active_sessions", "users", on_delete: :cascade
