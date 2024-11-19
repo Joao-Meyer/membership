@@ -1,10 +1,11 @@
-# README
+# RUBY ON RAILS VERSION
 
-## font
-https://stevepolito.design/blog/rails-authentication-from-scratch
+## Reference
 
-Things you may want to cover:
+> https://stevepolito.design/blog/rails-authentication-from-scratch
 
-* Services (job queues, cache servers, search engines, etc.)
+## Things to study later:
 
-* Deployment instructions
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
