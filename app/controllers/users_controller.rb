@@ -5,21 +5,24 @@ class UsersController < ApplicationController
   def create
     @user = User.new(create_user_params)
     if @user.save
-      @user.send_confirmation_email!
-      redirect_to root_path, notice: "Please check your email for confirmation instructions."
+      redirect_to root_path, notice: "User has been created."
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def destroy
-    current_user.destroy
+    id = 2
+    @user = User.find_by(:id, id)
+    @user.destroy
     reset_session
-    redirect_to root_path, notice: "Your account has been deleted."
+    redirect_to root_path, notice: "User has been deleted."
   end
 
   def edit
-    @user = current_user
+    id = 2
+    @user = User.find_by(:id, id)
+    # @user = current_user
     @active_sessions = @user.active_sessions.order(created_at: :desc)
   end
 
@@ -28,16 +31,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user
+    id = 2
+    @user = User.find_by(:id, id)
+    # @user = current_user
     @active_sessions = @user.active_sessions.order(created_at: :desc)
     if @user.authenticate(params[:user][:current_password])
       if @user.update(update_user_params)
-        if params[:user][:unconfirmed_email].present?
-          @user.send_confirmation_email!
-          redirect_to root_path, notice: "Check your email for confirmation instructions."
-        else
           redirect_to root_path, notice: "Account updated."
-        end
       else
         render :edit, status: :unprocessable_entity
       end
@@ -50,10 +50,10 @@ class UsersController < ApplicationController
   private
 
   def create_user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
   def update_user_params
-    params.require(:user).permit(:current_password, :password, :password_confirmation, :unconfirmed_email)
+    params.require(:user).permit(:name, :current_password, :password, :password_confirmation)
   end
 end
