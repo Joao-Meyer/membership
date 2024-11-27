@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def destroy
     id = 2
-    @user = User.find_by(:id, id)
+    @user = User.find_by(params[:id])
     @user.destroy
     reset_session
     redirect_to root_path, notice: "User has been deleted."
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   def edit
     id = 2
-    @user = User.find_by(:id, id)
+    @user = User.find_by(params[:id])
     # @user = current_user
     @active_sessions = @user.active_sessions.order(created_at: :desc)
   end
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
   def update
     id = 2
-    @user = User.find_by(:id, id)
+    @user = User.find_by(params[:id])
     # @user = current_user
     @active_sessions = @user.active_sessions.order(created_at: :desc)
     if @user.authenticate(params[:user][:current_password])
