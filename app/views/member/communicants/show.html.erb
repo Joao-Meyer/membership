@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @member_communicant %>
+
+<div>
+  <%= link_to "Edit this communicant", edit_member_communicant_path(@member_communicant) %> |
+  <%= link_to "Back to communicants", member_communicants_path %>
+
+  <%= button_to "Destroy this communicant", @member_communicant, method: :delete %>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_28_131858) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_28_175022) do
   create_table "active_sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "remember_token", null: false
@@ -20,6 +20,16 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_28_131858) do
     t.datetime "updated_at", null: false
     t.index ["remember_token"], name: "index_active_sessions_on_remember_token"
     t.index ["user_id"], name: "index_active_sessions_on_user_id"
+  end
+
+  create_table "member_communicants", force: :cascade do |t|
+    t.string "profession"
+    t.string "marital_status"
+    t.string "marital_partner"
+    t.string "partner_religious_confession"
+    t.string "admitted_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "members", force: :cascade do |t|

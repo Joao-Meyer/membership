@@ -1,0 +1,11 @@
+<% content_for :title, "New communicant" %>
+
+<h1>New communicant</h1>
+
+<%= render "form", member_communicant: @member_communicant %>
+
+<br>
+
+<div>
+  <%= link_to "Back to communicants", member_communicants_path %>
+</div>

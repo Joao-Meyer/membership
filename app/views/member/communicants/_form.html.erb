@@ -1,0 +1,42 @@
+<%= form_with(model: member_communicant) do |form| %>
+  <% if member_communicant.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(member_communicant.errors.count, "error") %> prohibited this member_communicant from being saved:</h2>
+
+      <ul>
+        <% member_communicant.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :profession, style: "display: block" %>
+    <%= form.text_field :profession %>
+  </div>
+
+  <div>
+    <%= form.label :marital_status, style: "display: block" %>
+    <%= form.text_field :marital_status %>
+  </div>
+
+  <div>
+    <%= form.label :marital_partner, style: "display: block" %>
+    <%= form.text_field :marital_partner %>
+  </div>
+
+  <div>
+    <%= form.label :partner_religious_confession, style: "display: block" %>
+    <%= form.text_field :partner_religious_confession %>
+  </div>
+
+  <div>
+    <%= form.label :admitted_by, style: "display: block" %>
+    <%= form.text_field :admitted_by %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
