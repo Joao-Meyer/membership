@@ -1,0 +1,2 @@
+class MemberCommunicant < ApplicationRecord
+end

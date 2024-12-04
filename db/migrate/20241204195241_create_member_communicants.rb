@@ -1,6 +1,6 @@
-class CreateMembers < ActiveRecord::Migration[7.2]
+class CreateMemberCommunicants < ActiveRecord::Migration[7.2]
   def change
-    create_table :members do |t|
+    create_table :member_communicants do |t|
       t.string :name
       t.string :surname
       t.string :address
@@ -15,7 +15,6 @@ class CreateMembers < ActiveRecord::Migration[7.2]
       t.string :nationality
       t.string :naturality
       t.string :uf
-      t.boolean :communicant
       t.string :scholarship
       t.string :father_name
       t.string :mother_name
@@ -24,6 +23,11 @@ class CreateMembers < ActiveRecord::Migration[7.2]
       t.date :reception_date
       t.string :minister_rev
       t.string :observation
+      t.string :profession
+      t.string :marital_status
+      t.string :marital_partner
+      t.string :partner_religious_confession
+      t.string :admitted_by
 
       t.timestamps
     end

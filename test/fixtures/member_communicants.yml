@@ -10,20 +10,24 @@ one:
   zip_code: MyString
   phone: MyString
   telephone: MyString
-  birth_date: 2024-11-28
+  birth_date: 2024-12-04
   sex: MyString
   nationality: MyString
   naturality: MyString
   uf: MyString
-  communicant: false
   scholarship: MyString
   father_name: MyString
   mother_name: MyString
   book_number: 1
   record_number: 1
-  reception_date: 2024-11-28
+  reception_date: 2024-12-04
   minister_rev: MyString
   observation: MyString
+  profession: MyString
+  marital_status: MyString
+  marital_partner: MyString
+  partner_religious_confession: MyString
+  admitted_by: MyString
 
 two:
   name: MyString
@@ -35,17 +39,21 @@ two:
   zip_code: MyString
   phone: MyString
   telephone: MyString
-  birth_date: 2024-11-28
+  birth_date: 2024-12-04
   sex: MyString
   nationality: MyString
   naturality: MyString
   uf: MyString
-  communicant: false
   scholarship: MyString
   father_name: MyString
   mother_name: MyString
   book_number: 1
   record_number: 1
-  reception_date: 2024-11-28
+  reception_date: 2024-12-04
   minister_rev: MyString
   observation: MyString
+  profession: MyString
+  marital_status: MyString
+  marital_partner: MyString
+  partner_religious_confession: MyString
+  admitted_by: MyString

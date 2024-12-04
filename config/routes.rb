@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  namespace :member do
-    resources :communicants
-    # resources :non_communicants
-  end
-
+  resources :member_communicants
   root "static_pages#home"
 
   post "login", to: "sessions#create"
