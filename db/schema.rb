@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_18_192944) do
+ActiveRecord::Schema[7.2].define(version: 2024_12_04_195241) do
   create_table "active_sessions", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "remember_token", null: false
@@ -20,6 +20,38 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_18_192944) do
     t.datetime "updated_at", null: false
     t.index ["remember_token"], name: "index_active_sessions_on_remember_token"
     t.index ["user_id"], name: "index_active_sessions_on_user_id"
+  end
+
+  create_table "member_communicants", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.string "address"
+    t.integer "number"
+    t.string "neighborhood"
+    t.string "city"
+    t.string "zip_code"
+    t.string "phone"
+    t.string "telephone"
+    t.date "birth_date"
+    t.string "sex"
+    t.string "nationality"
+    t.string "naturality"
+    t.string "uf"
+    t.string "scholarship"
+    t.string "father_name"
+    t.string "mother_name"
+    t.integer "book_number"
+    t.integer "record_number"
+    t.date "reception_date"
+    t.string "minister_rev"
+    t.string "observation"
+    t.string "profession"
+    t.string "marital_status"
+    t.string "marital_partner"
+    t.string "partner_religious_confession"
+    t.string "admitted_by"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

@@ -5,12 +5,12 @@
 <h1>Member communicants</h1>
 
 <div id="member_communicants">
-  <% @member_communicants.each do |member_communicant| %>
-    <%= render member_communicant %>
+    <% @member_communicants.each do |member_communicant| %>
+    <%= render partial: "member_communicant/member_communicant_item" %>
     <p>
-      <%= link_to "Show this member communicant", member_communicant %>
+        <%= link_to "Show this member communicant", member_communicant %>
     </p>
-  <% end %>
+    <% end %>
 </div>
 
 <%= link_to "New member communicant", new_member_communicant_path %>
