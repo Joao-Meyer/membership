@@ -6,7 +6,7 @@
 
 <div id="member_communicants">
     <% @member_communicants.each do |member_communicant| %>
-    <%= render partial: "member_communicant/member_communicant_item" %>
+    <%= render 'member_communicant_item', member_communicant: member_communicant %>
     <p>
         <%= link_to "Show this member communicant", member_communicant %>
     </p>
