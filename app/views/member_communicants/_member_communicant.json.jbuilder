@@ -1,2 +1,0 @@
-json.extract! member_communicant, :id, :name, :surname, :address, :number, :neighborhood, :city, :zip_code, :phone, :telephone, :birth_date, :sex, :nationality, :naturality, :uf, :scholarship, :father_name, :mother_name, :book_number, :record_number, :reception_date, :minister_rev, :observation, :profession, :marital_status, :marital_partner, :partner_religious_confession, :admitted_by, :created_at, :updated_at
-json.url member_communicant_url(member_communicant, format: :json)
